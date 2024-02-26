@@ -1,0 +1,27 @@
+[15:21] MARCO GONÇALVES
+
+CREATE TABLE disponibilidade (
+
+    Disponibilidade_ID INT AUTO_INCREMENT PRIMARY KEY,
+
+    MESA_ID INT,
+
+    Disponibilidade BOOLEAN,
+
+    FOREIGN KEY (MESA_ID) REFERENCES mesa(MESA_ID)
+
+);  
+
+[15:22] MARCO GONÇALVES
+
+SELECT
+
+    Disponibilidade_ID,
+
+    MESA_ID,
+
+    CASE WHEN Disponibilidade = 1 THEN 'disponível' ELSE 'indisponível' END AS Status
+
+FROM disponivel;
+
+ 
